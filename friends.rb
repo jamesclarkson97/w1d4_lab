@@ -45,3 +45,13 @@ def group_snacks(group)
   end
   return array_of_snacks
 end
+
+def find_people_with_no_friends(group)
+  friendless = []
+  for member in group
+    if (member[:friends].length == 0)
+      friendless << member
+    end
+  end
+  return friendless
+end
