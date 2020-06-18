@@ -18,3 +18,7 @@ end
 def add_friend(person, new_friend)
   person[:friends] << new_friend
 end
+
+def remove_friend(person, old_friend)
+  person[:friends].delete(old_friend)
+end
