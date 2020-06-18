@@ -35,3 +35,13 @@ def loan_money(lender, borrower, value)
   lender[:monies] -= value
   borrower[:monies] += value
 end
+
+def group_snacks(group)
+  array_of_snacks =[]
+  for member in group
+    for snack in member[:favourites][:snacks]
+      array_of_snacks << snack
+    end
+  end
+  return array_of_snacks
+end
