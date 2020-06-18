@@ -114,10 +114,20 @@ class TestFriends < MiniTest::Test
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
-
+# daph 100 fred 20
+# daph gives fred 10
+# daph has 90 fred 30
+  def test_loan_money
+    loan_money(@person5, @person4, 10)
+    result_daphne = @person5[:monies]
+    result_fred = @person4[:monies]
+    assert_equal(90, result_daphne)
+    assert_equal(30, result_fred)
+  end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
+
 
 
   # 9. Find people with no friends

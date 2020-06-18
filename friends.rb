@@ -30,3 +30,8 @@ group_money = 0
   end
   return group_money
 end
+
+def loan_money(lender, borrower, value)
+  lender[:monies] -= value
+  borrower[:monies] += value
+end
